@@ -1,0 +1,39 @@
+.footer{
+	background-color: #121212;
+	display:flex;
+	flex-direction:column;
+}
+
+
+.footer__wrap{
+	width:@mobile-width;
+	margin:0 auto;
+	display:flex;
+	flex-direction:column;
+	padding:30px 26px;
+	box-sizing:border-box;
+}
+
+.footer__wrap p{
+	margin:0;
+	text-align:center;
+	font-family: Roboto, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	letter-spacing: -0.01em;
+	color: #777777;
+}
+
+@media(min-width:@tablet-width){
+.footer__wrap{
+	width:@tablet-width;
+	}
+}
+
+@media(min-width:@desktop-width){
+	.footer__wrap{
+		width:@desktop-width;
+	}
+}

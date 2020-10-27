@@ -1,0 +1,430 @@
+.header-main{
+	display:flex;
+	//background-image:url('../img/bubble.svg');
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:cover;
+	position:relative;
+	overflow:hidden;
+}
+
+
+.header-main__text h2,
+.header-main__text p{
+	cursor: default;
+}
+
+.header-main__menu.menu-inner:hover{
+	transform:scale(1.1);
+	transition:0.6s all;
+}
+
+
+.header-main__wrapper{
+	width:@mobile-width;
+	margin:0 auto;
+	min-height:887px;
+	box-sizing:border-box;
+}
+
+.header-main__logo img{
+	width:60px;
+	height:60px;
+}
+
+.header-main__menu{
+	height:20px;
+	background-color:none;
+	border:none;
+	overflow:none;
+	background:transparent;
+	cursor:pointer;
+
+} 
+
+.header-main__menu span{
+	width:24px;
+	height:2px;
+	display:block;
+	background-color:#212121;
+	position:relative;
+}
+
+.header-main__menu span::before{
+	content:"";
+	width:24px;
+	height:2px;
+	display:block;
+	background-color:#212121;
+	position:absolute;
+	margin-top:6px;
+}
+
+.header-main__menu span::after{
+	content:"";
+	width:24px;
+	height:2px;
+	display:block;
+	background-color:#212121;
+	position:absolute;
+	margin-top:-6px;
+	
+}
+
+.header-main__menu:hover span::before{
+	margin-top:8px;
+}
+
+.header-main__menu:hover span::after{
+	margin-top:-8px;
+}
+
+
+.header-main__border{
+	width:1px;
+	height:48px;
+	background-color:#212121;
+	opacity:20%;
+}
+
+.header-main__logo-menu{
+	display:flex;
+	width:150px;
+	justify-content:space-between;
+	align-items:center;
+	margin-top:37px;
+	margin-left:28px;
+
+}
+
+@keyframes logo{
+	from {background-position: 0px 0px;}
+  	to {background-position: 3000px 0px;}
+
+}
+
+.header-main__logo span{
+	display:inline-block;
+	width:60px;
+	height:60px;
+	background-image: url('../img/sprites.png');
+
+}	
+
+.header-main__logo span:hover{
+	animation-name:logo;
+	
+	animation-duration:0.6s;
+	animation-timing-function: steps(50, end);
+}
+
+.header-main__text{
+	display:flex;
+	flex-direction:column;
+	margin-top:384px;
+}
+
+.header-main__text h2{
+	font-family: Roboto, sans-serif;
+	font-weight: bold;
+	font-size: 80px;
+	line-height: 90px;
+	text-align: center;
+	letter-spacing: -0.05em;
+	color: #212121;
+	margin:0;
+	padding:0;
+	display:inline-block;
+	width:400px;
+	margin:0 auto;
+}
+
+.header-main__text p{
+	font-family: Roboto, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 36px;
+	text-align: center;
+	color: #65778C;
+	margin:0;
+	padding:0;
+	display:inline-block;
+	width:400px;
+	margin:0 auto;
+	margin-top:27px;
+}
+
+.header-main__scroll{
+	display:flex;
+	margin-top:52px;
+	z-index:20;
+	position: relative;
+}
+
+.header-main__scroll a{
+	margin:0 auto;
+}
+
+.header-main__scroll span{
+	width:1px;
+	height:36px;
+	display: block;
+	background-color: #c4c4c4;
+	margin:0 auto;
+	position:relative;
+}
+
+@keyframes scroll{
+	0%{
+		top:24px;
+
+	}
+
+	35%{
+		top:-2px;
+	}
+
+	100%{
+		top:24px;
+	}
+
+}
+
+.header-main__scroll span::before{
+	content:"";
+	display:block;
+	width:9px;
+	height:9px;
+	border:2px solid #212121;
+	border-radius:50%;
+	position:absolute;
+	top:-2px;
+	left:-6px;
+	animation-name:scroll;
+	animation-duration:1s;
+	animation-iteration-count:infinite;
+	animation-timing-function:ease-out;
+	animation-fill-mode:forwards;
+
+}
+
+.header-main__wrapper{
+	position:relative;
+}
+
+.parallax-layer{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+
+.parallax{
+	position:absolute;
+	height:100%;
+	width:100%;
+	overflow:hidden; 
+	
+}
+
+.bg1{
+	background:url('../img/cupcake.png') no-repeat;
+	background-size:1650px;
+	background-position:left -500px top -60px;
+	transform:translateX(-54px);
+	width:99%;
+	height:99%;
+	
+}
+
+.bg2{
+	background:url('../img/applewatch-2.png') no-repeat;
+	background-size:600px;
+	background-position:right -60px top -70px;
+	transform:translate(10px,-20px);
+	
+	width:99%;
+	height:99%;
+	
+	
+}
+
+.bg3{
+	background:url('../img/banana.png') no-repeat;
+	background-size:1600px;
+	background-position:right -360px bottom -550px;
+	transform:translate(10px, 10px);
+
+	width:99%;
+	height:99%;
+	
+}
+
+.bg4{
+	display:none;
+}
+
+.bg5{
+	display:none;
+}
+
+.bg6{
+	display:none;
+}
+
+.header-main__video{
+	position:absolute;
+	top:-100px;
+	left:0;
+	overflow-x:hidden;
+
+}
+
+.header-main__video video{
+	
+	transform:translateX(-730px);
+}
+
+.header-main__menu{
+	outline:none;
+}
+
+@media(min-width:@tablet-width){
+	.header-main__wrapper{
+		width:@tablet-width;
+	}
+
+	.header-main__video video{
+		transform:translateX(-580px);
+	}
+
+
+	.bg1{
+		background-position:left -480px top -50px;
+		transform:translateX(-54px);
+	}
+
+	.bg2{
+		background-position:right -20px top -110px;
+		transform:translate(10px,-20px);
+	}
+
+	.bg3{
+		background-position:right -320px bottom -590px;
+		transform:translate(10px, 40px);
+	}
+
+	.header-main__logo-menu{
+		margin-top:73px;
+	}
+
+	.header-main__text{
+		margin-top:280px;
+	}
+
+}
+
+@media(min-width:@desktop-width){
+	.header-main__wrapper{
+		width:@desktop-width;
+	}
+
+	.header-main__video video{
+		transform:translateX(-20%);
+	}
+
+
+	.bg1{
+		background-position:left -280px top -60px;
+		transform:translateX(-54px);
+	}
+
+	.bg2{
+		background-position:right -240px bottom -10px;
+		transform:translate(10px,20px);
+		background-image: url('../img/applewatch.png');
+		background-size:1600px;
+		z-index:10;
+	}
+
+	.bg3{
+		background-position:right -260px top -70px;
+		transform:translate(10px, -12px);
+	}
+
+	.bg4{
+		background:url('../img/snickers.png') no-repeat;
+		background-size:1650px;
+		background-position:left -160px top -50px;
+		transform:translateX(-54px);
+		width:99%;
+		height:99%;
+	}
+
+	.header-main__text p{
+		z-index:12;
+	}
+
+	.bg5{
+		background:url('../img/donut.png') no-repeat;
+		background-size:1599px;
+		background-position:left -260px top -180px;
+		transform:translateX(10px);
+		width:99%;
+		height:99%;
+	}
+
+	.header-main__text h2{
+		padding-top:60px;
+	}
+
+	.header-main__logo-menu{
+		margin-left:85px;
+	}
+
+	.header-main__text h2{
+		text-align: left;
+		margin-left:85px;
+		margin-right:0;
+	}
+
+	.header-main__text p{
+		text-align: left;
+		margin-left:85px;
+		margin-right:0;
+	}
+
+	.bg4{
+		display:block;
+	}
+	
+
+	.bg5{
+		display:block;
+	}
+
+	.bg6{
+		background:url('../img/leaves.png') no-repeat;
+		background-size:1600px;
+		background-position:right -240px bottom 40px;
+		transform:translate(0px, 0px);
+		display:block;
+		width:99%;
+		height:99%;
+}
+
+.header-main__logo-menu{
+	z-index:200;
+	position: relative;
+}
+
+.header-main__text h2{
+	z-index:200;
+}
+
+.header-main__scroll{
+	left:400px;
+}
+
+}
